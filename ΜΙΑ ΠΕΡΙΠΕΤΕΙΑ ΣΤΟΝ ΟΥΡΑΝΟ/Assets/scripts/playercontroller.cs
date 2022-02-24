@@ -76,6 +76,7 @@ public class playercontroller : MonoBehaviour
         {
             sp.enabled = false;
             stopped = true;
+            this.enabled = false;
         }
         grounded = true;
         changeanim(standanim);
