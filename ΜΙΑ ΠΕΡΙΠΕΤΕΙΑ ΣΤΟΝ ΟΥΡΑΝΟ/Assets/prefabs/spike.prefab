@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1902867293501465379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.1317, y: -3.6, z: 0}
-  m_LocalScale: {x: 0.1011717, y: 0.1735, z: 1}
+  m_LocalScale: {x: 0.084458135, y: 0.1735, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,10 +100,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0.7}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -5.0007825, y: -5.352982}
+  - {x: -4.880955, y: -5.405386}
   - {x: -0.05588569, y: 0.0000009536743}
-  - {x: 5.3584404, y: -5.457264}
-  - {x: -5.1264186, y: -5.3877444}
+  - {x: 4.969007, y: -5.4048586}
+  - {x: -4.9167213, y: -5.405213}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -120,4 +120,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5bc0533c73cf5d458138dc4275b3b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popup: {fileID: 8863407977480779411, guid: b68ae99f41ca2ae49adbfbe9b60ea330, type: 3}
+  popup: {fileID: 0}

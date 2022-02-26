@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class playercontroller : MonoBehaviour
@@ -25,6 +23,7 @@ public class playercontroller : MonoBehaviour
 
     void Update()
     {
+/////////////////////////////////MOVEMENT/////////////////////////////////////////////
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             shouldjump = true;
@@ -34,7 +33,7 @@ public class playercontroller : MonoBehaviour
         {
             movement = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f) * speed * Time.deltaTime;
         }
-
+////////////////////////////////ANIMATION//////////////////////////////////////////
         if (grounded)
         {
             if (Input.GetAxis("Horizontal") != 0)
@@ -52,10 +51,8 @@ public class playercontroller : MonoBehaviour
         }
 /////////////////////////////FLIPPING/////////////////////////////////////////////
         if (Input.GetAxis("Horizontal") < 0 && facingright){//left pressed
-            print("left");
             flip();
         }else if (Input.GetAxis("Horizontal") > 0 && !facingright){//right pressed
-            print("right");
             flip();
         }
     }
