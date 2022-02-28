@@ -10,12 +10,6 @@ public class disappearing : MonoBehaviour
     public BoxCollider2D col;
     public SpriteRenderer sp;
 
-    void Start()
-    {
-        col.enabled = true;
-        sp.enabled = true;
-    }
-
     void Update()
     {
         if (timer <= 0)

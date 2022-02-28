@@ -347,12 +347,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3329311808865444577, guid: 4b05d270205d5f6479573f4f1b479f68, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.2653334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329311808865444577, guid: 4b05d270205d5f6479573f4f1b479f68, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.7709
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329311808865444577, guid: 4b05d270205d5f6479573f4f1b479f68, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.06765151
+      value: 0.37
       objectReference: {fileID: 0}
     - target: {fileID: 3329311808865444577, guid: 4b05d270205d5f6479573f4f1b479f68, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.37016487
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 3329311808865444577, guid: 4b05d270205d5f6479573f4f1b479f68, type: 3}
       propertyPath: m_LocalPosition.z
@@ -386,6 +394,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3329311808865444578, guid: 4b05d270205d5f6479573f4f1b479f68, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 032bd6c5884b2c843ac1490cf3fea3e0, type: 3}
     - target: {fileID: 3329311808865444579, guid: 4b05d270205d5f6479573f4f1b479f68, type: 3}
       propertyPath: m_Name
       value: cloud bg
@@ -456,7 +468,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1156304277
 GameObject:

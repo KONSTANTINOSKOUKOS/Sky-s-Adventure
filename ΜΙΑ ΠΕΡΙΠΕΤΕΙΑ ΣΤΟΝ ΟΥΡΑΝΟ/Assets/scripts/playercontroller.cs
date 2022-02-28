@@ -27,6 +27,7 @@ public class playercontroller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             shouldjump = true;
+            grounded = false;
         }
 
         if (!stopped)
@@ -64,6 +65,7 @@ public class playercontroller : MonoBehaviour
         {
             rb.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
             shouldjump = false;
+            grounded = true;
         }
     }
 
@@ -75,12 +77,20 @@ public class playercontroller : MonoBehaviour
             stopped = true;
             this.enabled = false;
         }
-        grounded = true;
-        changeanim(standanim);
+        if (collision.collider.tag == "ground")
+        {
+            grounded = true;
+            changeanim(standanim);
+        }
     }
     void OnCollisionExit2D(Collision2D collision)
     {
-        grounded = false;
+
+        if (collision.collider.tag == "ground")
+        {
+            grounded = false;
+            changeanim(jumpanim);
+        }
     }
 
     void flip()
