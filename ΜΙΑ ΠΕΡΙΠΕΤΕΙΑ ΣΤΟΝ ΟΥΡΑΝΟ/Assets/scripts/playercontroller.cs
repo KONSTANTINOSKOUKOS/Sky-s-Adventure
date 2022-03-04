@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class playercontroller : MonoBehaviour
 {
-    public Rigidbody2D rb;
+     public Rigidbody2D rb;
      public float speed;
      public float jump;
      Vector3 movement;
@@ -27,12 +27,12 @@ public class playercontroller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             shouldjump = true;
-            grounded = false;
+            //grounded = false;
         }
 
         if (!stopped)
         {
-            movement = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f) * speed * Time.deltaTime;
+            movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, 0.0f) * speed * Time.deltaTime;
         }
 ////////////////////////////////ANIMATION//////////////////////////////////////////
         if (grounded)
@@ -51,9 +51,9 @@ public class playercontroller : MonoBehaviour
             changeanim(jumpanim);
         }
 /////////////////////////////FLIPPING/////////////////////////////////////////////
-        if (Input.GetAxis("Horizontal") < 0 && facingright){//left pressed
+        if (Input.GetAxisRaw("Horizontal") < 0 && facingright){//left pressed
             flip();
-        }else if (Input.GetAxis("Horizontal") > 0 && !facingright){//right pressed
+        }else if (Input.GetAxisRaw("Horizontal") > 0 && !facingright){//right pressed
             flip();
         }
     }
@@ -65,7 +65,6 @@ public class playercontroller : MonoBehaviour
         {
             rb.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
             shouldjump = false;
-            grounded = true;
         }
     }
 
@@ -74,24 +73,27 @@ public class playercontroller : MonoBehaviour
         if (collision.collider.tag == "door" || collision.collider.tag == "spike")
         {
             sp.enabled = false;
-            stopped = true;
             this.enabled = false;
-        }
-        if (collision.collider.tag == "ground")
+        }//LOSING LOGIC
+    }
+
+    /*void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("ground"))
         {
             grounded = true;
             changeanim(standanim);
         }
     }
-    void OnCollisionExit2D(Collision2D collision)
-    {
 
-        if (collision.collider.tag == "ground")
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("ground"))
         {
             grounded = false;
             changeanim(jumpanim);
         }
-    }
+    }*/
 
     void flip()
     {
