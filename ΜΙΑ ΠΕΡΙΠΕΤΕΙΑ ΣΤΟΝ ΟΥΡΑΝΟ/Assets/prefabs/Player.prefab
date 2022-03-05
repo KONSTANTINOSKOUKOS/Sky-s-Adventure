@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1757411596799714092}
   speed: 60
-  jump: 75
+  jump: 65
   sp: {fileID: 1757411596799714091}
   animator: {fileID: 1757411596799714088}
 --- !u!61 &1757411596799714089
