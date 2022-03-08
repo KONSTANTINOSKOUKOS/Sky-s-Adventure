@@ -8,7 +8,7 @@ public class playercontroller : MonoBehaviour
      Vector3 movement;
 
      bool shouldjump = false;
-     bool grounded = true;
+     public bool grounded = true;
      bool facingright = true;
      bool stopped = false;
 
@@ -27,7 +27,8 @@ public class playercontroller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             shouldjump = true;
-            //grounded = false;
+            grounded = false;
+            print("jumping");
         }
 
         if (!stopped)
@@ -72,26 +73,32 @@ public class playercontroller : MonoBehaviour
     {
         if (collision.collider.tag == "door" || collision.collider.tag == "spike")
         {
-            sp.enabled = false;
-            this.enabled = false;
+            Destroy(gameObject, 1);
         }//LOSING LOGIC
-    }
 
-    /*void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("ground"))
+        if (collision.collider.tag == "ground")
         {
             grounded = true;
-            changeanim(standanim);
+            print("on ground");
         }
     }
 
-    void OnTriggerExit2D(Collider2D collision)
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "ground")
+        {
+            grounded = false;
+            print("on air");
+            //changeanim(standanim);
+        }
+    }
+
+    /*void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("ground"))
         {
             grounded = false;
-            changeanim(jumpanim);
+            //changeanim(jumpanim);
         }
     }*/
 
