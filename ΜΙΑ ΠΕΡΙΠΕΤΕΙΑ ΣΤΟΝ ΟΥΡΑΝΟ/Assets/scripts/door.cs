@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class door : MonoBehaviour
 {
@@ -15,5 +13,11 @@ public class door : MonoBehaviour
     {
         if (collision.collider.tag == "Player")
             popup.SetActive(true);
+    }
+
+    IEnumerator popupp()
+    {
+        yield return new WaitForSeconds(.2f);
+        popup.SetActive(true);
     }
 }

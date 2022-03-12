@@ -2,21 +2,17 @@ using UnityEngine;
 
 public class playercontroller : MonoBehaviour
 {
-     public Rigidbody2D rb;
-     public float speed;
-     public float jump;
-     Vector3 movement;
-
-     bool shouldjump = false;
-     public bool grounded = true;
-     bool facingright = true;
-     bool stopped = false;
-
+    public Rigidbody2D rb;
+    public float speed;
+    public float jump;
+    Vector3 movement;
+    bool shouldjump = false;
+    public bool grounded = true;
+    bool facingright = true;
+    bool stopped = false;
     public SpriteRenderer sp;
-
-     public Animator animator;
-     string currentanim;
-
+    public Animator animator;
+    string currentanim;
     const string standanim = "player stand";
     const string walkanim = "player walk";
     const string jumpanim = "player jump";
@@ -73,7 +69,7 @@ public class playercontroller : MonoBehaviour
     {
         if (collision.collider.tag == "door" || collision.collider.tag == "spike")
         {
-            Destroy(gameObject, 1);
+            Destroy(gameObject);
         }//LOSING LOGIC
 
         if (collision.collider.tag == "ground")
@@ -87,7 +83,7 @@ public class playercontroller : MonoBehaviour
     {
         if (collision.collider.tag == "ground")
         {
-            grounded = false;
+            //grounded = false;
             print("on air");
             //changeanim(standanim);
         }

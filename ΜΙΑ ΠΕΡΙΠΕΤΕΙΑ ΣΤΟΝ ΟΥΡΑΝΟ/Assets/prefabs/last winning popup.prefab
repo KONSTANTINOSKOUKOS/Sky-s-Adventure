@@ -156,7 +156,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: BACK TO MENU
+  m_Text: "\u03A0\u0399\u03A3\u03A9 \u03A3\u03A4\u039F \u039C\u0395\u039D\u039F\u03A5"
 --- !u!1 &1551362089173311786
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,8 +193,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -43.520325}
-  m_SizeDelta: {x: 105.842, y: 30}
+  m_AnchoredPosition: {x: 10.5339, y: -43.520325}
+  m_SizeDelta: {x: 122.9097, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1551362089173311790
 CanvasRenderer:
@@ -580,4 +580,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: YOU WON
+  m_Text: "\u039D\u0399\u039A\u0397\u03A3\u0395\u03A3!"
