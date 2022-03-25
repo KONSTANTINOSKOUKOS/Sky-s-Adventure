@@ -24,7 +24,6 @@ public class playercontroller : MonoBehaviour
         {
             shouldjump = true;
             grounded = false;
-            print("jumping");
         }
 
         if (!stopped)
@@ -75,7 +74,6 @@ public class playercontroller : MonoBehaviour
         if (collision.collider.tag == "ground")
         {
             grounded = true;
-            print("on ground");
         }
     }
 
@@ -84,7 +82,6 @@ public class playercontroller : MonoBehaviour
         if (collision.collider.tag == "ground")
         {
             //grounded = false;
-            print("on air");
             //changeanim(standanim);
         }
     }

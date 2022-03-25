@@ -540,10 +540,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: lost popup
       objectReference: {fileID: 0}
-    - target: {fileID: 8863407977480779411, guid: b68ae99f41ca2ae49adbfbe9b60ea330, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68ae99f41ca2ae49adbfbe9b60ea330, type: 3}
 --- !u!1001 &1538356415
@@ -841,10 +837,6 @@ PrefabInstance:
     - target: {fileID: 3121561491551937167, guid: ad98b9f20e32d28438731b6afb36a0b5, type: 3}
       propertyPath: m_Name
       value: winning popup
-      objectReference: {fileID: 0}
-    - target: {fileID: 3121561491551937167, guid: ad98b9f20e32d28438731b6afb36a0b5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad98b9f20e32d28438731b6afb36a0b5, type: 3}
